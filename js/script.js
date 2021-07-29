@@ -8,5 +8,20 @@ const bird = {
     } else {
       return false;
     }
+  },
+  eat: function () {
+    if (this.hungerScale === 0) {
+      console.log(`${this.name} is full and can't eat ny more.`);
+    } else {
+      this.hungerScale -= 1;
+      console.log("Nom nom nom nom mon!");
+    }
   }
 };
+
+bird.eat();
+console.log(bird.isHappy());
+
+bird.eat();
+console.log(bird.isHappy());
+
